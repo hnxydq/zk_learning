@@ -97,7 +97,7 @@ public class App {
                     System.out.println("name=" + name);
                 }
             }, "ctx object");
-
+            //这里睡眠5秒可以观察到，当上述异步创建完成后，内部的processResult方法会被回调
             Thread.sleep(5000);
 
             zkChildren = zk.getChildren("/", true);
